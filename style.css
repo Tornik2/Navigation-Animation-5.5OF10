@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600;900&family=Montserrat:wght@500;600;700;900&family=Open+Sans:wght@400;600;800&display=swap');
+* { 
+   box-sizing: border-box; 
+}
+
+body {
+font-family: 'Open Sans', sans-serif;    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(70, 148, 70) 50%, rgb(182, 223, 224) 50%);
+    display: grid;
+    place-content: center;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(9, 80, 30);
+    padding: 0;
+    margin: 0;
+    background-color: rgb(9, 80, 30);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+nav ul {
+    margin: 0;
+    padding: 1em 2em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    color: #FFF;
+    letter-spacing: 1px;
+    width: 0px;
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+}
+
+nav.show ul {
+    width: 400px;
+    opacity: 1;
+}
+
+nav ul li {
+    cursor: pointer;
+    border-bottom: #FFF 2px solid;
+    transform: rotateY(540deg);
+    transition: transform 0.8s ease-in-out;
+}
+nav ul li:hover {
+    color:rgb(70, 148, 70);
+    border-bottom: rgb(70, 148, 70) 2px solid;
+}
+nav.show ul li {
+    transform: rotateY(0);
+}
+button div {
+    margin: 0;
+    height:2px;
+    width: 25px;
+    background-color: white;
+
+}
+
+nav button div {
+    position: absolute;
+    top: 22px;
+    margin: auto;
+    transform: rotatez(0);
+    transition: transform 0.6s;
+}
+
+nav button .first-line {
+    bottom: 14px;
+}
+
+nav.show button .first-line {
+    transform: rotateZ(585deg);
+    bottom: 20px;
+}
+
+nav.show button .line {
+    transform: rotateZ(-585deg) translate(0.4px,-1px);
+    top: 27px;
+    
+}
+
+button {
+    
+    cursor: pointer;
+    position: absolute;
+    right:37px;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+button:hover div {
+    background-color: rgb(163, 149, 19);
+}
